@@ -29,12 +29,12 @@ document.getElementById('message-form').addEventListener('submit', async (event)
     try {
         let response;
         if (fileInput.files[0]) {
-            response = await fetch('http://127.0.0.1:8000/api/upload', {
+            response = await fetch('http://127.0.0.1:8006/api/upload', {
                 method: 'POST',
                 body: formData
             });
         } else {
-            response = await fetch('http://127.0.0.1:8000/api/text', {
+            response = await fetch('http://127.0.0.1:8006/api/text', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
