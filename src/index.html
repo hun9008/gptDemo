@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI Chat Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #chat-box {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        #messages {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+            margin-bottom: 20px;
+        }
+        .message {
+            margin-bottom: 10px;
+        }
+        .message p {
+            margin: 0;
+        }
+        .user-message {
+            text-align: right;
+        }
+        .server-message {
+            text-align: left;
+        }
+        #message-form {
+            display: flex;
+            flex-direction: column;
+        }
+        #message-form input[type="text"],
+        #message-form input[type="file"] {
+            margin-bottom: 10px;
+        }
+        #message-form button {
+            align-self: flex-end;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div id="chat-box">
+        <div id="messages"></div>
+        <form id="message-form">
+            <input type="text" id="text" name="text" placeholder="Type your message here..." required>
+            <input type="file" id="file" name="file">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
